@@ -1,0 +1,15 @@
+* CSC361 Assignment 1 : SmartClient
+This is a python program which will query a given URL and report:
+1. Whether the server supports HTTPS
+2. The latest HTTP version supported by the server
+3. A list of cookies
+
+Usage:
+usage: SmartClient.py [-h] [--debug DEBUG] hostname
+
+Method for detecting http2.0 support sourced from:
+https://blog.mafr.de/2016/08/27/detecting-http2-support/
+
+* Tasks
+** TODO Error Handling
+** TODO Downgrade to HTTP 2.1

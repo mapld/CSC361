@@ -2,26 +2,184 @@ import dpkt
 import socket
 import datetime
 import argparse
+import statistics
 
+def isValidOutgoing(data):
+    if isinstance(data, dpkt.udp.UDP):
+        return True
+    if isinstance(data, dpkt.icmp.ICMP) and data.type == 8:
+        return True
+    return False
 
 def reportOnFile(filename):
     f = open(filename, 'rb')
     pcap = dpkt.pcap.Reader(f)
 
+    # the highest ttl packet sent out to this point
+    ttl_counter = 0
+    source_node_ip = ""
+    ultimate_dest_ip = ""
 
-    count = 1
+    intermediate_ips = []
+    intermediate_ips_set = set()
+    outgoing_packets = {}
+
+    ttl_counts = [0] * 100
+
+    datagrams = {}
+
+    # contains list of all protocols found in trace file
+    protocols = set()
+
+
+    count = 0
     for ts, buf in pcap:
         ethernet_obj = dpkt.ethernet.Ethernet(buf)
         ip_obj = ethernet_obj.data
 
-        if not isinstance(ethernet_obj.data, dpkt.ip.IP):
-            print("Packet " + str(count) + " not an IP packet")
-            continue
-        source_ip = socket.inet_ntoa(ip_obj.src)
-        dest_ip = socket.inet_ntoa(ip_obj.dst)
-        print("Packet " + str(count) + ":: source ip: " + source_ip + ", dest ip: " + dest_ip)
         count += 1
 
+        # print("packet ", count, ", type:", type(ip_obj.data))
+
+        if not isinstance(ethernet_obj.data, dpkt.ip.IP):
+            # print("Packet " + str(count) + " not an IP packet")
+            continue
+
+        protocols.add(ip_obj.p)
+
+        source_ip = socket.inet_ntoa(ip_obj.src)
+        dest_ip = socket.inet_ntoa(ip_obj.dst)
+        # print("Packet " + str(count) + ":: source ip: " + source_ip + ", dest ip: " + dest_ip)
+
+        cur_ttl = ip_obj.ttl
+        if cur_ttl < ttl_counter:
+            # print("WARNING: out of order packet", count)
+            continue
+        # if cur_ttl == ttl_counter:
+        #     print("Another packet with ttl ", cur_ttl)
+        if cur_ttl == ttl_counter + 1 and isValidOutgoing(ip_obj.data):
+            # print("Sent packet with ttl ", cur_ttl)
+            ttl_counter = cur_ttl
+            if ttl_counter == 1:
+                source_node_ip = source_ip
+                ultimate_dest_ip = dest_ip
+
+        if source_ip == source_node_ip and dest_ip == ultimate_dest_ip: # from source node
+            frag_id = ip_obj.id
+            more_fragments = bool(ip_obj.off & dpkt.ip.IP_MF)
+            frag_offset = (ip_obj.off & dpkt.ip.IP_OFFMASK)*8
+            if frag_id not in datagrams:
+                datagrams[frag_id] = {'count':0, 'offset':0, 'send_times':[]}
+            if more_fragments or frag_offset > 0:
+                datagrams[frag_id]['count'] += 1
+                datagrams[frag_id]['offset'] = frag_offset
+            datagrams[frag_id]['send_times'].append(ts)
+
+            intermediate_ips.append("") # placeholder to be filled in
+            intermediate_ips.append("") # placeholder to be filled in
+            intermediate_ips.append("") # placeholder to be filled in
+            intermediate_ips.append("") # placeholder to be filled in
+            intermediate_ips.append("") # placeholder to be filled in
+            if isinstance(ip_obj.data, dpkt.udp.UDP):
+                udp_obj = ip_obj.data
+
+                # record that an outgoing udp request has been sent to a specific port
+                outgoing_packets[udp_obj.dport] = {'ttl':ip_obj.ttl, 'ttl_adj':ttl_counts[ip_obj.ttl]}
+                ttl_counts[ip_obj.ttl] += 1
+
+            if isinstance(ip_obj.data, dpkt.icmp.ICMP) and ip_obj.data.type == 8:
+                icmp_obj = ip_obj.data
+
+                outgoing_packets[icmp_obj['echo'].seq] = {'ttl':ip_obj.ttl, 'ttl_adj':ttl_counts[ip_obj.ttl]}
+                ttl_counts[ip_obj.ttl] += 1
+
+
+        elif dest_ip == source_node_ip: # back to source node
+
+
+            if isinstance(ip_obj.data, dpkt.udp.UDP):
+                udp_obj = ip_obj.data
+            elif isinstance(ip_obj.data, dpkt.icmp.ICMP):
+                icmp_obj = ip_obj.data
+                icmp_type = icmp_obj.type
+                data_packet = icmp_obj.data
+                if icmp_type == 8 or icmp_type == 0:
+                    # handle ping reply case
+                    seq = data_packet.seq
+                    outgoing_packets[seq]['reply_time'] = ts
+                    outgoing_packets[seq]['ip'] = source_ip
+                    outgoing_packets[seq]['frag_id'] = frag_id
+                    continue
+                data_packet = icmp_obj.data.data.data
+                if isinstance(data_packet, dpkt.udp.UDP) and data_packet.dport in outgoing_packets:
+                    outgoing_packets[data_packet.dport]['reply_time'] = ts
+                    outgoing_packets[data_packet.dport]['ip'] = source_ip
+                    outgoing_packets[data_packet.dport]['frag_id'] = frag_id
+                    if icmp_type == 11:
+                        # print("Response from intermediate node", data_packet.dport)
+                        if source_ip not in intermediate_ips_set:
+                            ttl = outgoing_packets[data_packet.dport]['ttl']
+                            ttl_adj = outgoing_packets[data_packet.dport]['ttl_adj']
+                            intermediate_ips[(ttl*5)-1+ttl_adj] = source_ip
+                            intermediate_ips_set.add(source_ip)
+
+                    #     print("Response from final node", data_packet.dport)
+                if isinstance(data_packet, dpkt.icmp.ICMP) and data_packet['echo'].seq in outgoing_packets:
+                    seq = data_packet['echo'].seq
+                    outgoing_packets[seq]['reply_time'] = ts
+                    outgoing_packets[seq]['ip'] = source_ip
+                    outgoing_packets[seq]['frag_id'] = frag_id
+                    if icmp_type == 11:
+                        if source_ip not in intermediate_ips_set:
+                            ttl = outgoing_packets[seq]['ttl']
+                            ttl_adj = outgoing_packets[seq]['ttl_adj']
+                            intermediate_ips[(ttl*5)-1+ttl_adj] = source_ip
+                            intermediate_ips_set.add(source_ip)
+        else:
+            # print("Ignoring packet not to or from source node")
+            continue
+
+    # remove empty strings from ip list (packets sent out which didn't return from an intermediate host)
+    while "" in intermediate_ips: intermediate_ips.remove("")
+
+    print("")
+
+    print("Source IP: ", source_node_ip)
+    print("Destination IP: ", ultimate_dest_ip)
+    print("Intermediate IPs:")
+    for ip in intermediate_ips:
+        print(ip)
+
+    print("")
+    print("Protocols found in trace: ")
+    #table containing names for all the protocol numbers
+    protocol_table = {num:name[8:] for name,num in vars(socket).items() if name.startswith("IPPROTO")}
+    for protocol in protocols:
+        print(protocol_table[protocol])
+
+    print("Datagrams:")
+    for id,datagram in datagrams.items():
+        print("Datagram " + str(id) + ": " + str(datagram["count"]) + " fragments, final offset: " + str(datagram["offset"]))
+
+    ip_rtts = {}
+    for port,packet in outgoing_packets.items():
+        if 'frag_id' not in packet:
+            continue
+        frag_id = packet['frag_id']
+        send_times = datagrams[frag_id]['send_times']
+        if 'reply_time' not in packet:
+            continue
+        reply_time = packet['reply_time']
+        ip = packet['ip']
+        if ip not in ip_rtts:
+            ip_rtts[ip] = []
+        for send_time in send_times:
+            ip_rtts[ip].append(reply_time - send_time)
+
+    print("")
+    for ip, rtts in ip_rtts.items():
+        print("Average rtt for ip ", ip, ": ", statistics.mean(rtts))
+        print("Stddev rtt for ip ", ip, ": ", statistics.pstdev(rtts))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Read a cap file and report information on intermediate hosts and fragmentation details')

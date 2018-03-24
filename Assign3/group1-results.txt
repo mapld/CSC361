@@ -1,0 +1,665 @@
+
+Source IP:  192.168.100.17
+Destination IP:  8.8.8.8
+Intermediate IPs:
+142.104.68.167
+142.104.68.1
+192.168.9.5
+192.168.10.1
+192.168.8.6
+142.104.252.37
+142.104.252.246
+207.23.244.242
+206.12.3.17
+199.212.24.64
+206.81.80.17
+74.125.37.91
+72.14.237.123
+209.85.249.155
+209.85.250.121
+209.85.249.153
+
+Protocols found in trace: 
+UDP
+TCP
+ICMP
+
+Datagrams:
+Datagram 16252: 0 fragments, final offset: 0
+Datagram 16253: 0 fragments, final offset: 0
+Datagram 16254: 0 fragments, final offset: 0
+Datagram 16255: 0 fragments, final offset: 0
+Datagram 16256: 0 fragments, final offset: 0
+Datagram 16257: 0 fragments, final offset: 0
+Datagram 16258: 0 fragments, final offset: 0
+Datagram 16259: 0 fragments, final offset: 0
+Datagram 16260: 0 fragments, final offset: 0
+Datagram 16261: 0 fragments, final offset: 0
+Datagram 16262: 0 fragments, final offset: 0
+Datagram 16263: 0 fragments, final offset: 0
+Datagram 16264: 0 fragments, final offset: 0
+Datagram 16265: 0 fragments, final offset: 0
+Datagram 16266: 0 fragments, final offset: 0
+Datagram 16267: 0 fragments, final offset: 0
+Datagram 16269: 0 fragments, final offset: 0
+Datagram 16271: 0 fragments, final offset: 0
+Datagram 16272: 0 fragments, final offset: 0
+Datagram 16280: 0 fragments, final offset: 0
+Datagram 16282: 0 fragments, final offset: 0
+Datagram 16284: 0 fragments, final offset: 0
+Datagram 16286: 0 fragments, final offset: 0
+Datagram 16288: 0 fragments, final offset: 0
+Datagram 16289: 0 fragments, final offset: 0
+Datagram 16290: 0 fragments, final offset: 0
+Datagram 16291: 0 fragments, final offset: 0
+Datagram 16292: 0 fragments, final offset: 0
+Datagram 16293: 0 fragments, final offset: 0
+Datagram 16294: 0 fragments, final offset: 0
+Datagram 16295: 0 fragments, final offset: 0
+Datagram 16296: 0 fragments, final offset: 0
+Datagram 16297: 0 fragments, final offset: 0
+Datagram 16298: 0 fragments, final offset: 0
+Datagram 16299: 0 fragments, final offset: 0
+Datagram 16300: 0 fragments, final offset: 0
+Datagram 16301: 0 fragments, final offset: 0
+Datagram 16302: 0 fragments, final offset: 0
+Datagram 16303: 0 fragments, final offset: 0
+Datagram 16306: 0 fragments, final offset: 0
+Datagram 16307: 0 fragments, final offset: 0
+Datagram 16312: 0 fragments, final offset: 0
+Datagram 16313: 0 fragments, final offset: 0
+Datagram 16317: 0 fragments, final offset: 0
+Datagram 16322: 0 fragments, final offset: 0
+Datagram 16323: 0 fragments, final offset: 0
+Datagram 16324: 0 fragments, final offset: 0
+Datagram 16327: 0 fragments, final offset: 0
+Datagram 16328: 0 fragments, final offset: 0
+Datagram 16329: 0 fragments, final offset: 0
+Datagram 16330: 0 fragments, final offset: 0
+Datagram 16331: 0 fragments, final offset: 0
+Datagram 16332: 0 fragments, final offset: 0
+Datagram 16333: 0 fragments, final offset: 0
+Datagram 16334: 0 fragments, final offset: 0
+Datagram 16335: 0 fragments, final offset: 0
+Datagram 16336: 0 fragments, final offset: 0
+Datagram 16337: 0 fragments, final offset: 0
+Datagram 16338: 0 fragments, final offset: 0
+Datagram 16339: 0 fragments, final offset: 0
+Datagram 16340: 0 fragments, final offset: 0
+Datagram 16341: 0 fragments, final offset: 0
+Datagram 16342: 0 fragments, final offset: 0
+Datagram 16343: 0 fragments, final offset: 0
+Datagram 16345: 0 fragments, final offset: 0
+Datagram 16346: 0 fragments, final offset: 0
+Datagram 16348: 0 fragments, final offset: 0
+Datagram 16353: 0 fragments, final offset: 0
+Datagram 16355: 0 fragments, final offset: 0
+
+Average rtt for ip  142.104.68.167 :  0.011366605758666992
+Stddev rtt for ip  142.104.68.167 :  0.00020693890309806084
+Average rtt for ip  142.104.68.1 :  0.016850709915161133
+Stddev rtt for ip  142.104.68.1 :  0.00020002991988521377
+Average rtt for ip  192.168.9.5 :  0.016008615493774414
+Stddev rtt for ip  192.168.9.5 :  0.00022542406258892582
+Average rtt for ip  192.168.10.1 :  0.017561992009480793
+Stddev rtt for ip  192.168.10.1 :  0.00020605732503769361
+Average rtt for ip  192.168.8.6 :  0.018361012140909832
+Stddev rtt for ip  192.168.8.6 :  0.00023040482779421105
+Average rtt for ip  142.104.252.37 :  0.011861324310302734
+Stddev rtt for ip  142.104.252.37 :  0.006499882028240888
+Average rtt for ip  142.104.252.246 :  0.013507366180419922
+Stddev rtt for ip  142.104.252.246 :  0.0003289651713714812
+Average rtt for ip  207.23.244.242 :  0.014095624287923178
+Stddev rtt for ip  207.23.244.242 :  0.00031868929873328885
+Average rtt for ip  206.12.3.17 :  0.0182342529296875
+Stddev rtt for ip  206.12.3.17 :  0.0002351007878556195
+Average rtt for ip  199.212.24.64 :  0.01691158612569173
+Stddev rtt for ip  199.212.24.64 :  0.00021359806231631287
+Average rtt for ip  206.81.80.17 :  0.01942896842956543
+Stddev rtt for ip  206.81.80.17 :  0.00023223315871612863
+Average rtt for ip  74.125.37.91 :  0.011770009994506836
+Stddev rtt for ip  74.125.37.91 :  0.0024089813232421875
+Average rtt for ip  72.14.237.123 :  0.0176239013671875
+Stddev rtt for ip  72.14.237.123 :  0.0
+Average rtt for ip  209.85.249.155 :  0.0198211669921875
+Stddev rtt for ip  209.85.249.155 :  0.0
+Average rtt for ip  209.85.250.121 :  0.018468141555786133
+Stddev rtt for ip  209.85.250.121 :  0.0
+Average rtt for ip  209.85.249.153 :  0.02057194709777832
+Stddev rtt for ip  209.85.249.153 :  0.0
+Average rtt for ip  8.8.8.8 :  0.01997995376586914
+Stddev rtt for ip  8.8.8.8 :  0.003501088151462791
+
+Source IP:  192.168.100.17
+Destination IP:  8.8.8.8
+Intermediate IPs:
+142.104.68.167
+142.104.68.1
+192.168.9.5
+192.168.10.1
+192.168.8.6
+142.104.252.37
+142.104.252.246
+207.23.244.242
+206.12.3.17
+199.212.24.64
+206.81.80.17
+72.14.237.123
+74.125.37.91
+209.85.249.109
+209.85.250.57
+209.85.246.219
+
+Protocols found in trace: 
+UDP
+ICMP
+
+Datagrams:
+Datagram 18871: 0 fragments, final offset: 0
+Datagram 18872: 0 fragments, final offset: 0
+Datagram 18873: 0 fragments, final offset: 0
+Datagram 18874: 0 fragments, final offset: 0
+Datagram 18875: 0 fragments, final offset: 0
+Datagram 18876: 0 fragments, final offset: 0
+Datagram 18877: 0 fragments, final offset: 0
+Datagram 18878: 0 fragments, final offset: 0
+Datagram 18879: 0 fragments, final offset: 0
+Datagram 18880: 0 fragments, final offset: 0
+Datagram 18881: 0 fragments, final offset: 0
+Datagram 18882: 0 fragments, final offset: 0
+Datagram 18883: 0 fragments, final offset: 0
+Datagram 18884: 0 fragments, final offset: 0
+Datagram 18885: 0 fragments, final offset: 0
+Datagram 18886: 0 fragments, final offset: 0
+Datagram 18888: 0 fragments, final offset: 0
+Datagram 18893: 0 fragments, final offset: 0
+Datagram 18894: 0 fragments, final offset: 0
+Datagram 18896: 0 fragments, final offset: 0
+Datagram 18898: 0 fragments, final offset: 0
+Datagram 18900: 0 fragments, final offset: 0
+Datagram 18902: 0 fragments, final offset: 0
+Datagram 18903: 0 fragments, final offset: 0
+Datagram 18904: 0 fragments, final offset: 0
+Datagram 18905: 0 fragments, final offset: 0
+Datagram 18906: 0 fragments, final offset: 0
+Datagram 18907: 0 fragments, final offset: 0
+Datagram 18908: 0 fragments, final offset: 0
+Datagram 18909: 0 fragments, final offset: 0
+Datagram 18910: 0 fragments, final offset: 0
+Datagram 18911: 0 fragments, final offset: 0
+Datagram 18912: 0 fragments, final offset: 0
+Datagram 18913: 0 fragments, final offset: 0
+Datagram 18914: 0 fragments, final offset: 0
+Datagram 18915: 0 fragments, final offset: 0
+Datagram 18916: 0 fragments, final offset: 0
+Datagram 18917: 0 fragments, final offset: 0
+Datagram 18918: 0 fragments, final offset: 0
+Datagram 18920: 0 fragments, final offset: 0
+Datagram 18921: 0 fragments, final offset: 0
+Datagram 18924: 0 fragments, final offset: 0
+Datagram 18925: 0 fragments, final offset: 0
+Datagram 18926: 0 fragments, final offset: 0
+Datagram 18927: 0 fragments, final offset: 0
+Datagram 18928: 0 fragments, final offset: 0
+Datagram 18929: 0 fragments, final offset: 0
+Datagram 18930: 0 fragments, final offset: 0
+Datagram 18931: 0 fragments, final offset: 0
+Datagram 18932: 0 fragments, final offset: 0
+Datagram 18933: 0 fragments, final offset: 0
+Datagram 18934: 0 fragments, final offset: 0
+Datagram 18935: 0 fragments, final offset: 0
+Datagram 18936: 0 fragments, final offset: 0
+Datagram 18937: 0 fragments, final offset: 0
+Datagram 18939: 0 fragments, final offset: 0
+Datagram 18940: 0 fragments, final offset: 0
+Datagram 18941: 0 fragments, final offset: 0
+Datagram 18946: 0 fragments, final offset: 0
+Datagram 18949: 0 fragments, final offset: 0
+Datagram 18953: 0 fragments, final offset: 0
+Datagram 18966: 0 fragments, final offset: 0
+Datagram 18968: 0 fragments, final offset: 0
+Datagram 19084: 0 fragments, final offset: 0
+Datagram 19087: 0 fragments, final offset: 0
+Datagram 19088: 0 fragments, final offset: 0
+Datagram 19093: 0 fragments, final offset: 0
+Datagram 19095: 0 fragments, final offset: 0
+Datagram 19099: 0 fragments, final offset: 0
+
+Average rtt for ip  142.104.68.167 :  0.011385043462117514
+Stddev rtt for ip  142.104.68.167 :  0.00022275614550989033
+Average rtt for ip  142.104.68.1 :  0.01593303680419922
+Stddev rtt for ip  142.104.68.1 :  0.0004414771792433567
+Average rtt for ip  192.168.9.5 :  0.015450398127237955
+Stddev rtt for ip  192.168.9.5 :  0.0003350295072267527
+Average rtt for ip  192.168.10.1 :  0.017711639404296875
+Stddev rtt for ip  192.168.10.1 :  0.000519495464485563
+Average rtt for ip  192.168.8.6 :  0.01687796910603841
+Stddev rtt for ip  192.168.8.6 :  0.0003389652278584917
+Average rtt for ip  142.104.252.37 :  0.01164094607035319
+Stddev rtt for ip  142.104.252.37 :  0.006286043202126975
+Average rtt for ip  142.104.252.246 :  0.013429403305053711
+Stddev rtt for ip  142.104.252.246 :  0.00022764426005119655
+Average rtt for ip  207.23.244.242 :  0.050241947174072266
+Stddev rtt for ip  207.23.244.242 :  0.025682413888611224
+Average rtt for ip  206.12.3.17 :  0.016794761021931965
+Stddev rtt for ip  206.12.3.17 :  0.00023590257069710472
+Average rtt for ip  199.212.24.64 :  0.0175780455271403
+Stddev rtt for ip  199.212.24.64 :  0.00020449962064486343
+Average rtt for ip  206.81.80.17 :  0.01922329266866048
+Stddev rtt for ip  206.81.80.17 :  0.00022578246434304752
+Average rtt for ip  72.14.237.123 :  0.014830589294433594
+Stddev rtt for ip  72.14.237.123 :  0.0023305416107177734
+Average rtt for ip  74.125.37.91 :  0.016414165496826172
+Stddev rtt for ip  74.125.37.91 :  0.0
+Average rtt for ip  209.85.249.109 :  0.01741814613342285
+Stddev rtt for ip  209.85.249.109 :  0.0
+Average rtt for ip  209.85.250.57 :  0.017935991287231445
+Stddev rtt for ip  209.85.250.57 :  0.0
+Average rtt for ip  209.85.246.219 :  0.018702030181884766
+Stddev rtt for ip  209.85.246.219 :  0.0
+Average rtt for ip  8.8.8.8 :  0.01813320318857829
+Stddev rtt for ip  8.8.8.8 :  0.0028655297539523805
+
+Source IP:  192.168.100.17
+Destination IP:  8.8.8.8
+Intermediate IPs:
+142.104.68.167
+142.104.68.1
+192.168.9.5
+192.168.10.1
+192.168.8.6
+142.104.252.37
+142.104.252.246
+207.23.244.242
+206.12.3.17
+199.212.24.64
+206.81.80.17
+74.125.37.91
+72.14.237.123
+209.85.247.63
+209.85.245.65
+209.85.249.155
+
+Protocols found in trace: 
+UDP
+ICMP
+TCP
+
+Datagrams:
+Datagram 63853: 0 fragments, final offset: 0
+Datagram 63854: 0 fragments, final offset: 0
+Datagram 63855: 0 fragments, final offset: 0
+Datagram 63856: 0 fragments, final offset: 0
+Datagram 63857: 0 fragments, final offset: 0
+Datagram 63858: 0 fragments, final offset: 0
+Datagram 63859: 0 fragments, final offset: 0
+Datagram 63860: 0 fragments, final offset: 0
+Datagram 63861: 0 fragments, final offset: 0
+Datagram 63862: 0 fragments, final offset: 0
+Datagram 63863: 0 fragments, final offset: 0
+Datagram 63864: 0 fragments, final offset: 0
+Datagram 63865: 0 fragments, final offset: 0
+Datagram 63866: 0 fragments, final offset: 0
+Datagram 63867: 0 fragments, final offset: 0
+Datagram 63868: 0 fragments, final offset: 0
+Datagram 63869: 0 fragments, final offset: 0
+Datagram 63873: 0 fragments, final offset: 0
+Datagram 63874: 0 fragments, final offset: 0
+Datagram 63881: 0 fragments, final offset: 0
+Datagram 63883: 0 fragments, final offset: 0
+Datagram 63884: 0 fragments, final offset: 0
+Datagram 63886: 0 fragments, final offset: 0
+Datagram 63887: 0 fragments, final offset: 0
+Datagram 63888: 0 fragments, final offset: 0
+Datagram 63889: 0 fragments, final offset: 0
+Datagram 63890: 0 fragments, final offset: 0
+Datagram 63891: 0 fragments, final offset: 0
+Datagram 63892: 0 fragments, final offset: 0
+Datagram 63893: 0 fragments, final offset: 0
+Datagram 63894: 0 fragments, final offset: 0
+Datagram 63895: 0 fragments, final offset: 0
+Datagram 63896: 0 fragments, final offset: 0
+Datagram 63897: 0 fragments, final offset: 0
+Datagram 63898: 0 fragments, final offset: 0
+Datagram 63899: 0 fragments, final offset: 0
+Datagram 63900: 0 fragments, final offset: 0
+Datagram 63901: 0 fragments, final offset: 0
+Datagram 63902: 0 fragments, final offset: 0
+Datagram 63903: 0 fragments, final offset: 0
+Datagram 63904: 0 fragments, final offset: 0
+Datagram 63906: 0 fragments, final offset: 0
+Datagram 63907: 0 fragments, final offset: 0
+Datagram 63912: 0 fragments, final offset: 0
+Datagram 63913: 0 fragments, final offset: 0
+Datagram 63915: 0 fragments, final offset: 0
+Datagram 63919: 0 fragments, final offset: 0
+Datagram 63920: 0 fragments, final offset: 0
+Datagram 63921: 0 fragments, final offset: 0
+Datagram 63922: 0 fragments, final offset: 0
+Datagram 63923: 0 fragments, final offset: 0
+Datagram 63924: 0 fragments, final offset: 0
+Datagram 63925: 0 fragments, final offset: 0
+Datagram 63926: 0 fragments, final offset: 0
+Datagram 63927: 0 fragments, final offset: 0
+Datagram 63928: 0 fragments, final offset: 0
+Datagram 63929: 0 fragments, final offset: 0
+Datagram 63930: 0 fragments, final offset: 0
+Datagram 63931: 0 fragments, final offset: 0
+Datagram 63932: 0 fragments, final offset: 0
+Datagram 63933: 0 fragments, final offset: 0
+Datagram 63934: 0 fragments, final offset: 0
+Datagram 63935: 0 fragments, final offset: 0
+Datagram 63941: 0 fragments, final offset: 0
+Datagram 63942: 0 fragments, final offset: 0
+Datagram 63946: 0 fragments, final offset: 0
+Datagram 63949: 0 fragments, final offset: 0
+Datagram 63953: 0 fragments, final offset: 0
+Datagram 63956: 0 fragments, final offset: 0
+
+Average rtt for ip  142.104.68.167 :  0.011686007181803385
+Stddev rtt for ip  142.104.68.167 :  0.00021716956118332406
+Average rtt for ip  142.104.68.1 :  0.015732367833455402
+Stddev rtt for ip  142.104.68.1 :  0.0003216481557058447
+Average rtt for ip  192.168.9.5 :  0.01631442705790202
+Stddev rtt for ip  192.168.9.5 :  0.00031565049184552254
+Average rtt for ip  192.168.10.1 :  0.017157951990763348
+Stddev rtt for ip  192.168.10.1 :  0.0002070398106943587
+Average rtt for ip  192.168.8.6 :  0.017914692560831707
+Stddev rtt for ip  192.168.8.6 :  0.0002078463410103319
+Average rtt for ip  142.104.252.37 :  0.012113412221272787
+Stddev rtt for ip  142.104.252.37 :  0.006296052356734776
+Average rtt for ip  142.104.252.246 :  0.014406045277913412
+Stddev rtt for ip  142.104.252.246 :  0.00022131292271933444
+Average rtt for ip  207.23.244.242 :  0.015182256698608398
+Stddev rtt for ip  207.23.244.242 :  0.00020819908392452386
+Average rtt for ip  206.12.3.17 :  0.018085559209187824
+Stddev rtt for ip  206.12.3.17 :  0.00023139538156639872
+Average rtt for ip  199.212.24.64 :  0.018864949544270832
+Stddev rtt for ip  199.212.24.64 :  0.00020410935820334696
+Average rtt for ip  206.81.80.17 :  0.020102580388387043
+Stddev rtt for ip  206.81.80.17 :  0.00021811172509480543
+Average rtt for ip  74.125.37.91 :  0.015970945358276367
+Stddev rtt for ip  74.125.37.91 :  0.002067089080810547
+Average rtt for ip  72.14.237.123 :  0.009567975997924805
+Stddev rtt for ip  72.14.237.123 :  0.0
+Average rtt for ip  209.85.247.63 :  0.023164987564086914
+Stddev rtt for ip  209.85.247.63 :  0.0
+Average rtt for ip  209.85.245.65 :  0.019551992416381836
+Stddev rtt for ip  209.85.245.65 :  0.0
+Average rtt for ip  209.85.249.155 :  0.019802093505859375
+Stddev rtt for ip  209.85.249.155 :  0.0
+Average rtt for ip  8.8.8.8 :  0.01980247100194295
+Stddev rtt for ip  8.8.8.8 :  0.003394467348416381
+
+Source IP:  192.168.100.17
+Destination IP:  8.8.8.8
+Intermediate IPs:
+142.104.68.167
+142.104.68.1
+192.168.9.5
+192.168.10.1
+192.168.8.6
+142.104.252.37
+142.104.252.246
+207.23.244.242
+206.12.3.17
+199.212.24.64
+206.81.80.17
+74.125.37.91
+72.14.237.123
+209.85.246.219
+209.85.250.123
+209.85.245.65
+
+Protocols found in trace: 
+UDP
+ICMP
+
+Datagrams:
+Datagram 13631: 0 fragments, final offset: 0
+Datagram 13632: 0 fragments, final offset: 0
+Datagram 13633: 0 fragments, final offset: 0
+Datagram 13634: 0 fragments, final offset: 0
+Datagram 13635: 0 fragments, final offset: 0
+Datagram 13636: 0 fragments, final offset: 0
+Datagram 13637: 0 fragments, final offset: 0
+Datagram 13638: 0 fragments, final offset: 0
+Datagram 13639: 0 fragments, final offset: 0
+Datagram 13640: 0 fragments, final offset: 0
+Datagram 13641: 0 fragments, final offset: 0
+Datagram 13642: 0 fragments, final offset: 0
+Datagram 13643: 0 fragments, final offset: 0
+Datagram 13644: 0 fragments, final offset: 0
+Datagram 13645: 0 fragments, final offset: 0
+Datagram 13646: 0 fragments, final offset: 0
+Datagram 13649: 0 fragments, final offset: 0
+Datagram 13652: 0 fragments, final offset: 0
+Datagram 13653: 0 fragments, final offset: 0
+Datagram 13655: 0 fragments, final offset: 0
+Datagram 13656: 0 fragments, final offset: 0
+Datagram 13658: 0 fragments, final offset: 0
+Datagram 13660: 0 fragments, final offset: 0
+Datagram 13661: 0 fragments, final offset: 0
+Datagram 13662: 0 fragments, final offset: 0
+Datagram 13663: 0 fragments, final offset: 0
+Datagram 13664: 0 fragments, final offset: 0
+Datagram 13665: 0 fragments, final offset: 0
+Datagram 13666: 0 fragments, final offset: 0
+Datagram 13667: 0 fragments, final offset: 0
+Datagram 13668: 0 fragments, final offset: 0
+Datagram 13669: 0 fragments, final offset: 0
+Datagram 13670: 0 fragments, final offset: 0
+Datagram 13671: 0 fragments, final offset: 0
+Datagram 13672: 0 fragments, final offset: 0
+Datagram 13673: 0 fragments, final offset: 0
+Datagram 13674: 0 fragments, final offset: 0
+Datagram 13675: 0 fragments, final offset: 0
+Datagram 13676: 0 fragments, final offset: 0
+Datagram 13678: 0 fragments, final offset: 0
+Datagram 13679: 0 fragments, final offset: 0
+Datagram 13682: 0 fragments, final offset: 0
+Datagram 13683: 0 fragments, final offset: 0
+Datagram 13686: 0 fragments, final offset: 0
+Datagram 13689: 0 fragments, final offset: 0
+Datagram 13694: 0 fragments, final offset: 0
+Datagram 13696: 0 fragments, final offset: 0
+Datagram 13700: 0 fragments, final offset: 0
+Datagram 13701: 0 fragments, final offset: 0
+Datagram 13702: 0 fragments, final offset: 0
+Datagram 13703: 0 fragments, final offset: 0
+Datagram 13704: 0 fragments, final offset: 0
+Datagram 13705: 0 fragments, final offset: 0
+Datagram 13706: 0 fragments, final offset: 0
+Datagram 13707: 0 fragments, final offset: 0
+Datagram 13708: 0 fragments, final offset: 0
+Datagram 13709: 0 fragments, final offset: 0
+Datagram 13710: 0 fragments, final offset: 0
+Datagram 13711: 0 fragments, final offset: 0
+Datagram 13712: 0 fragments, final offset: 0
+Datagram 13713: 0 fragments, final offset: 0
+Datagram 13714: 0 fragments, final offset: 0
+Datagram 13715: 0 fragments, final offset: 0
+Datagram 13720: 0 fragments, final offset: 0
+Datagram 13721: 0 fragments, final offset: 0
+Datagram 13723: 0 fragments, final offset: 0
+Datagram 13725: 0 fragments, final offset: 0
+Datagram 13727: 0 fragments, final offset: 0
+
+Average rtt for ip  142.104.68.167 :  0.011214017868041992
+Stddev rtt for ip  142.104.68.167 :  0.00022113559915281692
+Average rtt for ip  142.104.68.1 :  0.015712738037109375
+Stddev rtt for ip  142.104.68.1 :  0.0005706560519572553
+Average rtt for ip  192.168.9.5 :  0.01542059580485026
+Stddev rtt for ip  192.168.9.5 :  0.000209468629130988
+Average rtt for ip  192.168.10.1 :  0.01668866475423177
+Stddev rtt for ip  192.168.10.1 :  0.00020410972952956578
+Average rtt for ip  192.168.8.6 :  0.017442623774210613
+Stddev rtt for ip  192.168.8.6 :  0.00020459614383510515
+Average rtt for ip  142.104.252.37 :  0.011519352595011393
+Stddev rtt for ip  142.104.252.37 :  0.006200727559222319
+Average rtt for ip  142.104.252.246 :  0.013587713241577148
+Stddev rtt for ip  142.104.252.246 :  0.0004544003347064565
+Average rtt for ip  207.23.244.242 :  0.014006376266479492
+Stddev rtt for ip  207.23.244.242 :  0.0003230681716623794
+Average rtt for ip  206.12.3.17 :  0.016930659612019856
+Stddev rtt for ip  206.12.3.17 :  0.00021475275495461672
+Average rtt for ip  199.212.24.64 :  0.018181006113688152
+Stddev rtt for ip  199.212.24.64 :  0.0002507952925851967
+Average rtt for ip  206.81.80.17 :  0.019433975219726562
+Stddev rtt for ip  206.81.80.17 :  0.00024077750536184654
+Average rtt for ip  74.125.37.91 :  0.014241933822631836
+Stddev rtt for ip  74.125.37.91 :  0.0
+Average rtt for ip  72.14.237.123 :  0.013638019561767578
+Stddev rtt for ip  72.14.237.123 :  0.004066944122314453
+Average rtt for ip  209.85.246.219 :  0.019006013870239258
+Stddev rtt for ip  209.85.246.219 :  0.0
+Average rtt for ip  209.85.250.123 :  0.019514083862304688
+Stddev rtt for ip  209.85.250.123 :  0.0
+Average rtt for ip  209.85.245.65 :  0.020806074142456055
+Stddev rtt for ip  209.85.245.65 :  0.0
+Average rtt for ip  8.8.8.8 :  0.019648691018422444
+Stddev rtt for ip  8.8.8.8 :  0.0033198314154928043
+
+Source IP:  192.168.100.17
+Destination IP:  8.8.8.8
+Intermediate IPs:
+142.104.68.167
+142.104.68.1
+192.168.9.5
+192.168.10.1
+192.168.8.6
+142.104.252.37
+142.104.252.246
+207.23.244.242
+206.12.3.17
+199.212.24.64
+206.81.80.17
+72.14.237.123
+209.85.249.153
+209.85.250.59
+209.85.247.61
+
+Protocols found in trace: 
+UDP
+ICMP
+TCP
+
+Datagrams:
+Datagram 24603: 0 fragments, final offset: 0
+Datagram 24604: 0 fragments, final offset: 0
+Datagram 24605: 0 fragments, final offset: 0
+Datagram 24606: 0 fragments, final offset: 0
+Datagram 24607: 0 fragments, final offset: 0
+Datagram 24608: 0 fragments, final offset: 0
+Datagram 24609: 0 fragments, final offset: 0
+Datagram 24610: 0 fragments, final offset: 0
+Datagram 24611: 0 fragments, final offset: 0
+Datagram 24612: 0 fragments, final offset: 0
+Datagram 24613: 0 fragments, final offset: 0
+Datagram 24614: 0 fragments, final offset: 0
+Datagram 24615: 0 fragments, final offset: 0
+Datagram 24616: 0 fragments, final offset: 0
+Datagram 24617: 0 fragments, final offset: 0
+Datagram 24618: 0 fragments, final offset: 0
+Datagram 24619: 0 fragments, final offset: 0
+Datagram 24620: 0 fragments, final offset: 0
+Datagram 24621: 0 fragments, final offset: 0
+Datagram 24622: 0 fragments, final offset: 0
+Datagram 24623: 0 fragments, final offset: 0
+Datagram 24624: 0 fragments, final offset: 0
+Datagram 24625: 0 fragments, final offset: 0
+Datagram 24627: 0 fragments, final offset: 0
+Datagram 24628: 0 fragments, final offset: 0
+Datagram 24629: 0 fragments, final offset: 0
+Datagram 24630: 0 fragments, final offset: 0
+Datagram 24631: 0 fragments, final offset: 0
+Datagram 24632: 0 fragments, final offset: 0
+Datagram 24633: 0 fragments, final offset: 0
+Datagram 24634: 0 fragments, final offset: 0
+Datagram 24635: 0 fragments, final offset: 0
+Datagram 24636: 0 fragments, final offset: 0
+Datagram 24637: 0 fragments, final offset: 0
+Datagram 24638: 0 fragments, final offset: 0
+Datagram 24639: 0 fragments, final offset: 0
+Datagram 24640: 0 fragments, final offset: 0
+Datagram 24641: 0 fragments, final offset: 0
+Datagram 24642: 0 fragments, final offset: 0
+Datagram 24644: 0 fragments, final offset: 0
+Datagram 24645: 0 fragments, final offset: 0
+Datagram 24649: 0 fragments, final offset: 0
+Datagram 24650: 0 fragments, final offset: 0
+Datagram 24651: 0 fragments, final offset: 0
+Datagram 24655: 0 fragments, final offset: 0
+Datagram 24658: 0 fragments, final offset: 0
+Datagram 24659: 0 fragments, final offset: 0
+Datagram 24663: 0 fragments, final offset: 0
+Datagram 24664: 0 fragments, final offset: 0
+Datagram 24665: 0 fragments, final offset: 0
+Datagram 24666: 0 fragments, final offset: 0
+Datagram 24667: 0 fragments, final offset: 0
+Datagram 24668: 0 fragments, final offset: 0
+Datagram 24669: 0 fragments, final offset: 0
+Datagram 24670: 0 fragments, final offset: 0
+Datagram 24671: 0 fragments, final offset: 0
+Datagram 24672: 0 fragments, final offset: 0
+Datagram 24673: 0 fragments, final offset: 0
+Datagram 24674: 0 fragments, final offset: 0
+Datagram 24675: 0 fragments, final offset: 0
+Datagram 24676: 0 fragments, final offset: 0
+Datagram 24677: 0 fragments, final offset: 0
+Datagram 24678: 0 fragments, final offset: 0
+Datagram 24681: 0 fragments, final offset: 0
+Datagram 24682: 0 fragments, final offset: 0
+Datagram 24683: 0 fragments, final offset: 0
+Datagram 24685: 0 fragments, final offset: 0
+Datagram 24688: 0 fragments, final offset: 0
+
+Average rtt for ip  142.104.68.167 :  0.011298418045043945
+Stddev rtt for ip  142.104.68.167 :  0.00020579745226778257
+Average rtt for ip  142.104.68.1 :  0.016691287358601887
+Stddev rtt for ip  142.104.68.1 :  0.000237166720944425
+Average rtt for ip  192.168.9.5 :  0.017484347025553387
+Stddev rtt for ip  192.168.9.5 :  0.0002120750199466445
+Average rtt for ip  192.168.10.1 :  0.01824673016866048
+Stddev rtt for ip  192.168.10.1 :  0.0002081977491345504
+Average rtt for ip  192.168.8.6 :  0.019010384877522785
+Stddev rtt for ip  192.168.8.6 :  0.0002090738666576799
+Average rtt for ip  142.104.252.37 :  0.011917670567830404
+Stddev rtt for ip  142.104.252.37 :  0.006635109906705527
+Average rtt for ip  142.104.252.246 :  0.01353891690572103
+Stddev rtt for ip  142.104.252.246 :  0.0003277492338041116
+Average rtt for ip  207.23.244.242 :  0.01852242151896159
+Stddev rtt for ip  207.23.244.242 :  0.00648662013110737
+Average rtt for ip  206.12.3.17 :  0.0167083740234375
+Stddev rtt for ip  206.12.3.17 :  0.0002163276057926674
+Average rtt for ip  199.212.24.64 :  0.017964601516723633
+Stddev rtt for ip  199.212.24.64 :  0.00024228090846709264
+Average rtt for ip  206.81.80.17 :  0.019327402114868164
+Stddev rtt for ip  206.81.80.17 :  0.0004060657347819014
+Average rtt for ip  72.14.237.123 :  0.013892014821370443
+Stddev rtt for ip  72.14.237.123 :  0.0035733895676409353
+Average rtt for ip  209.85.249.153 :  0.019647836685180664
+Stddev rtt for ip  209.85.249.153 :  0.0
+Average rtt for ip  209.85.250.59 :  0.01936507225036621
+Stddev rtt for ip  209.85.250.59 :  0.0
+Average rtt for ip  209.85.247.61 :  0.019891023635864258
+Stddev rtt for ip  209.85.247.61 :  0.0
+Average rtt for ip  8.8.8.8 :  0.02088132271399865
+Stddev rtt for ip  8.8.8.8 :  0.0026057640363518152
+
+
+                  Trace 1           Trace 2           Trace 3           Trace 4           Trace 5           
+Probes per ttl   3                 3                 3                 3                 3                 
+
+Router with IP  209.85.249.155 found in traces  {1, 3} and not found in {2, 4, 5}
+Router with IP  209.85.249.153 found in traces  {1, 5} and not found in {2, 3, 4}
+Router with IP  209.85.250.121 found in traces  {1} and not found in {2, 3, 4, 5}
+Router with IP  74.125.37.91 found in traces  {1, 2, 3, 4} and not found in {5}
+Router with IP  209.85.250.57 found in traces  {2} and not found in {1, 3, 4, 5}
+Router with IP  209.85.249.109 found in traces  {2} and not found in {1, 3, 4, 5}
+Router with IP  209.85.246.219 found in traces  {2, 4} and not found in {1, 3, 5}
+Router with IP  209.85.247.63 found in traces  {3} and not found in {1, 2, 4, 5}
+Router with IP  209.85.245.65 found in traces  {3, 4} and not found in {1, 2, 5}
+Router with IP  209.85.250.123 found in traces  {4} and not found in {1, 2, 3, 5}
+Router with IP  209.85.247.61 found in traces  {5} and not found in {1, 2, 3, 4}
+Router with IP  209.85.250.59 found in traces  {5} and not found in {1, 2, 3, 4}

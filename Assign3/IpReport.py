@@ -26,14 +26,21 @@ def reportOnFile(filename):
 
     ttl_counts = [0] * 100
 
+    ttl_probe_count = 0 # how many probes used "per ttl"
+
     datagrams = {}
+    frag_id_map = {}
 
     # contains list of all protocols found in trace file
     protocols = set()
 
+    base_ts = 0
 
     count = 0
     for ts, buf in pcap:
+        if count == 0:
+            base_ts = ts
+
         ethernet_obj = dpkt.ethernet.Ethernet(buf)
         ip_obj = ethernet_obj.data
 
@@ -64,6 +71,9 @@ def reportOnFile(filename):
                 source_node_ip = source_ip
                 ultimate_dest_ip = dest_ip
 
+        if cur_ttl == ttl_counter and isValidOutgoing(ip_obj.data) and ttl_counter == 1:
+            ttl_probe_count += 1
+
         if source_ip == source_node_ip and dest_ip == ultimate_dest_ip: # from source node
             frag_id = ip_obj.id
             more_fragments = bool(ip_obj.off & dpkt.ip.IP_MF)
@@ -82,6 +92,7 @@ def reportOnFile(filename):
             intermediate_ips.append("") # placeholder to be filled in
             if isinstance(ip_obj.data, dpkt.udp.UDP):
                 udp_obj = ip_obj.data
+                frag_id_map[udp_obj.dport] = frag_id
 
                 # record that an outgoing udp request has been sent to a specific port
                 outgoing_packets[udp_obj.dport] = {'ttl':ip_obj.ttl, 'ttl_adj':ttl_counts[ip_obj.ttl]}
@@ -89,6 +100,7 @@ def reportOnFile(filename):
 
             if isinstance(ip_obj.data, dpkt.icmp.ICMP) and ip_obj.data.type == 8:
                 icmp_obj = ip_obj.data
+                frag_id_map[icmp_obj['echo'].seq] = frag_id
 
                 outgoing_packets[icmp_obj['echo'].seq] = {'ttl':ip_obj.ttl, 'ttl_adj':ttl_counts[ip_obj.ttl]}
                 ttl_counts[ip_obj.ttl] += 1
@@ -108,13 +120,13 @@ def reportOnFile(filename):
                     seq = data_packet.seq
                     outgoing_packets[seq]['reply_time'] = ts
                     outgoing_packets[seq]['ip'] = source_ip
-                    outgoing_packets[seq]['frag_id'] = frag_id
+                    outgoing_packets[seq]['frag_id'] = frag_id_map[seq]
                     continue
                 data_packet = icmp_obj.data.data.data
                 if isinstance(data_packet, dpkt.udp.UDP) and data_packet.dport in outgoing_packets:
                     outgoing_packets[data_packet.dport]['reply_time'] = ts
                     outgoing_packets[data_packet.dport]['ip'] = source_ip
-                    outgoing_packets[data_packet.dport]['frag_id'] = frag_id
+                    outgoing_packets[data_packet.dport]['frag_id'] = frag_id_map[data_packet.dport]
                     if icmp_type == 11:
                         # print("Response from intermediate node", data_packet.dport)
                         if source_ip not in intermediate_ips_set:
@@ -128,7 +140,7 @@ def reportOnFile(filename):
                     seq = data_packet['echo'].seq
                     outgoing_packets[seq]['reply_time'] = ts
                     outgoing_packets[seq]['ip'] = source_ip
-                    outgoing_packets[seq]['frag_id'] = frag_id
+                    outgoing_packets[seq]['frag_id'] = frag_id_map[seq]
                     if icmp_type == 11:
                         if source_ip not in intermediate_ips_set:
                             ttl = outgoing_packets[seq]['ttl']
@@ -141,6 +153,10 @@ def reportOnFile(filename):
 
     # remove empty strings from ip list (packets sent out which didn't return from an intermediate host)
     while "" in intermediate_ips: intermediate_ips.remove("")
+
+    rdata = {}
+    rdata['ttl_probe_count'] = ttl_probe_count
+    rdata['intermediate_ips'] = intermediate_ips_set
 
     print("")
 
@@ -157,6 +173,7 @@ def reportOnFile(filename):
     for protocol in protocols:
         print(protocol_table[protocol])
 
+    print("")
     print("Datagrams:")
     for id,datagram in datagrams.items():
         print("Datagram " + str(id) + ": " + str(datagram["count"]) + " fragments, final offset: " + str(datagram["offset"]))
@@ -177,9 +194,14 @@ def reportOnFile(filename):
             ip_rtts[ip].append(reply_time - send_time)
 
     print("")
+    rtt_counter = 0
+    rdata['rtt_means'] = []
     for ip, rtts in ip_rtts.items():
         print("Average rtt for ip ", ip, ": ", statistics.mean(rtts))
+        rdata['rtt_means'].append( statistics.mean(rtts))
         print("Stddev rtt for ip ", ip, ": ", statistics.pstdev(rtts))
+
+    return rdata
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Read a cap file and report information on intermediate hosts and fragmentation details')

@@ -1,0 +1,15 @@
+* Assignment 3: IP datagrams
+
+This implements assignment 3.
+
+IpReport.py can be used to report the details about a .pcap file as detailed in the first requirement of the assignment.
+
+Usage: python IpReport.py [filename]
+
+MultiIpReport.py runs the first command on a group of .pcap files and compiles the results as detailed in the second requirement.
+
+Usage: python MultiIpReport.py [filename1] [filename2] [filename3] ...
+
+The results from the two groups of capture files can be found in:
+group1-results.txt
+group2-results.txt

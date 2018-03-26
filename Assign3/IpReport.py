@@ -62,6 +62,8 @@ def reportOnFile(filename):
         if cur_ttl < ttl_counter:
             # print("WARNING: out of order packet", count)
             continue
+
+        print(cur_ttl)
         # if cur_ttl == ttl_counter:
         #     print("Another packet with ttl ", cur_ttl)
         if cur_ttl == ttl_counter + 1 and isValidOutgoing(ip_obj.data):
@@ -74,7 +76,7 @@ def reportOnFile(filename):
         if cur_ttl == ttl_counter and isValidOutgoing(ip_obj.data) and ttl_counter == 1:
             ttl_probe_count += 1
 
-        if source_ip == source_node_ip and dest_ip == ultimate_dest_ip: # from source node
+        if source_ip == source_node_ip and dest_ip == ultimate_dest_ip and cur_ttl <= ttl_counter+1: # from source node
             frag_id = ip_obj.id
             more_fragments = bool(ip_obj.off & dpkt.ip.IP_MF)
             frag_offset = (ip_obj.off & dpkt.ip.IP_OFFMASK)*8
@@ -95,6 +97,7 @@ def reportOnFile(filename):
                 frag_id_map[udp_obj.dport] = frag_id
 
                 # record that an outgoing udp request has been sent to a specific port
+                print(ip_obj.ttl)
                 outgoing_packets[udp_obj.dport] = {'ttl':ip_obj.ttl, 'ttl_adj':ttl_counts[ip_obj.ttl]}
                 ttl_counts[ip_obj.ttl] += 1
 
